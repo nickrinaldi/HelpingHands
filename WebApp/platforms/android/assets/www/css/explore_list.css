@@ -1,0 +1,164 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+.container-fluid{
+    background-color: rgba(0, 0, 0, .9);
+    background-image: url(../img/wood.jpg);
+}
+
+body {
+	background-repeat: repeat-x;
+	background-size: auto 100vh;
+	font-family: 'Raleway', sans-serif;
+	padding-left: 0px;
+    padding-right: 0px;
+}
+
+header {
+	text-align: center;
+	color: white;
+	padding: 10px 0;
+}
+
+h1 {
+	font-size: 3.5em;
+	margin: 0px;
+}
+
+p{
+	display: inline;
+	margin: 0px;
+}
+
+.myImageDiv{
+	position: absolute;
+	display: inline;
+	right:0px;
+	top:0px;
+}
+
+#events {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-height: 80vh;
+	overflow-y: scroll;
+}
+
+h2 {
+	font-size: 13px;
+	display: inline-block;
+	margin: 0px;
+}
+
+h3 {
+	margin: 0px;
+}
+
+/*.modal-header
+ {
+     background-color: rgba(255,0,255, .1);
+ }
+
+ .modal-body
+ {
+     background-color: rgba(255,0,255, .1);
+ }
+
+ .modal-footer
+ {
+     background-color: rgb(255,0,255, .1);
+ }*/
+
+.event {
+	background-color: white;
+	width: 90vw;
+	height: 108px;
+	margin: 0 auto;
+	position: relative;
+	overflow: auto;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+.event_img {
+	position: relative;
+	right: 4px;
+	top: 4px;
+}
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.rating {
+	font-size: 0.8em;
+}
+
+.star {
+	height: 15px;
+	width: 15px;
+}
+
+#load {
+	text-align: center;
+	margin-top: 20vh;
+}
+
+
+#control {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	left: 0px;
+	position: fixed;
+	bottom: 0;
+	border-top: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.7);	
+}
+
+.center{
+	text-align: center;
+}
+
+#control > div {
+	display: table-cell;
+	text-align: center;
+	width: 25vw;
+	padding: 10px 0;
+	color: white;
+	font-size: 1.1em;
+}
+
+.icon {
+	height: 40px;
+	width: auto;
+}
+
+#logout {
+	position: fixed;
+	right: 20px;
+	margin-top: 20px;
+}
+
+#searchBar {
+	text-align: center;
+}
+
+#searchBar > input {
+	width: 90vw;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 10px;
+	padding: 3px;
+	border-radius: 4px;
+}
+
+#label {
+	display: block;
+	color: white;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/explore_list.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+        <script src="js/oauth-1.0a.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>      
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+        <!-- Latest compiled and minified CSS 
+        <link rel="stylesheet" src="js/bootstrap/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script> -->
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <title>Helping Hand</title>
+    </head>
+    <body class="container-fluid">
+        <img id="logout" class="icon banner" src="icon/logout.png" />
+        <header>
+            <h1>Helping Hand</h1>
+        </header>
+
+        <!-- Search bar -->
+        <!-- <div id="searchBar" ng-app="">
+            <input type="text" placeholder="Search" ng-model="search">
+            <p id="label">searching for {{search}}</p>
+        </div> -->
+
+        <div id="load">
+            <img src="img/loader.gif" />
+        </div>
+
+        <div id="events"></div>
+
+        <div id="control">
+            <div id="recommended"><img class="icon" src="icon/thumbs-up_b.png"/></div>
+            <div id="date" ><img class="icon" src="icon/calendar.png"/></div>
+            <div id="proximity" ><img class="icon" src="icon/compass.png"/></div>
+            <div id="popular"> <img class="icon" src="icon/fire.png"/></div>
+        </div>
+
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" id="modal_header">
+                    </div>
+                    <div class="modal-body" id="modal_body">
+                    </div>
+                    <div class="modal-footer center-block" id="modal_footer">
+                        <div type="button" class="btn btn-default center-block" data-dismiss="modal" id="rsvpButton">RSVP</div>
+                        <div type="button" style="margin-left:0px;" class="btn btn-default center-block" data-dismiss="modal">Close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript" src="js/explore_list.js"></script>
+    <script type="text/javascript">
+          var config = {
+              apiKey: "AIzaSyC_pbAXd9L3iRgnH641Q7mSHfZ4blrZXAk",
+              authDomain: "helping-hand-c061d.firebaseapp.com",
+              databaseURL: "https://helping-hand-c061d.firebaseio.com",
+              storageBucket: "helping-hand-c061d.appspot.com",
+              messagingSenderId: "253830931420"
+            };
+          firebase.initializeApp(config);
+    </script>
+    </body>
+</html>
